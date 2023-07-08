@@ -7,7 +7,7 @@ A Oyohim api SDK for Node.js.
 
 ## License
 
-The repository is licensed under the [AGPL3.0 or later License](./LICENSE).
+The repository is licensed under the [GPL3.0](./LICENSE).
 
 But the sub-packages may be licensed differently.
 
