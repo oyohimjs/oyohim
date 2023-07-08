@@ -1,0 +1,25 @@
+{
+  "name": "@oyohim/platfrom-koishi",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A Dynamic Signature Generator for Oyohim",
+  "author": "oyohimjs",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+htpps://github.com/oyohimjs/oyohim.git",
+    "directory": "platfrom/koishi"
+  },
+  "bugs": {
+    "url": "https://github.com/oyohimjs/oyohim/issues"
+  },
+  "homepage": "oyohimjs.github.io",
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

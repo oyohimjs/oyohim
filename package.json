@@ -1,0 +1,13 @@
+{
+  "name": "@root/oyohim",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Oyohim Monorepo",
+  "license": "GPL3.0",
+  "scripts": {},
+  "workspaces":[
+    "./packages/*",
+    "./adapter/*",
+    "./extend/*"
+  ]
+}

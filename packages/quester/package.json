@@ -1,0 +1,25 @@
+{
+  "name": "@oyohim/quester",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Simple http request framework for oyohim.",
+  "author": "oyohimjs",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+htpps://github.com/oyohimjs/oyohim.git",
+    "directory": "packages/quester"
+  },
+  "bugs": {
+    "url": "https://github.com/oyohimjs/oyohim/issues"
+  },
+  "homepage": "oyohimjs.github.io",
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

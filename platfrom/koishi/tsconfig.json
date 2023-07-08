@@ -1,0 +1,13 @@
+{
+	"extends": "../../tsconfig.base",
+	"compilerOptions": {
+		"resolveJsonModule": true,
+		"rootDir": "src",
+		"outDir": "lib"
+	},
+	"include": [
+		"src",
+		"src/saltCN.json",
+		"src/saltOS.json",
+	]
+}
