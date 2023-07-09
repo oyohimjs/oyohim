@@ -3,11 +3,21 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "oyohim":["packages/oyohim/src"],
-      "@oyohim/*": ["packages/*/src"],
-      "@oyohim/adapter-*": ["adapter/*/src"],
-      "@oyohim/platfrom-*": ["platfrom/*/src"],
-      "*": ["packages/*/src"],
+      "oyohim": [
+        "packages/oyohim/src"
+      ],
+      "@oyohim/*": [
+        "packages/*/src"
+      ],
+      "@oyohim/adapter-*": [
+        "adapter/*/src"
+      ],
+      "@oyohim/platfrom-*": [
+        "platfrom/*/src"
+      ],
+      "*": [
+        "packages/*/src"
+      ]
     }
   }
 }

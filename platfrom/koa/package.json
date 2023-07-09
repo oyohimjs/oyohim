@@ -2,7 +2,7 @@
   "name": "@oyohim/platfrom-koa",
   "version": "1.0.0",
   "private": false,
-  "description": "A Dynamic Signature Generator for Oyohim",
+  "description": "Simple server framework for koa2",
   "author": "oyohimjs",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
