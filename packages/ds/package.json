@@ -1,7 +1,6 @@
 {
   "name": "@oyohim/ds",
   "version": "1.0.0",
-  "private": false,
   "description": "A Dynamic Signature Generator for Oyohim",
   "author": "oyohimjs",
   "main": "lib/index.js",

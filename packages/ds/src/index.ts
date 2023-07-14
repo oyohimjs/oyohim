@@ -42,7 +42,7 @@ export class DynamicSecret {
   }
 
   createSign<T extends DynamicSecret.Version>(type: T): DynamicSecret.Constructor<T> {
-    return this[type as string] as DynamicSecret.Constructor<T>
+    return this[type.toString()] as DynamicSecret.Constructor<T>
   }
 }
 

@@ -1,7 +1,6 @@
-# @oyoHiM/DS
+# @oYoHim/DS
 
 [![npm](https://img.shields.io/npm/v/@oyohim/ds?style=flat-square)](https://www.npmjs.com/package/@oyohim/ds)
-[![GitHub](https://img.shields.io/github/license/oyohimjs/oyohim?style=flat-square)](./LICENSE)
 ![issues](https://img.shields.io/github/issues/oyohimjs/oyohim?style=flat-square)
 
 Create a dynamic secret for oyohim.
@@ -14,6 +13,15 @@ npm install @oyohim/ds
 # or use yarn
 
 yarn add @oyohim/ds
+```
+
+## Usage
+
+```typescript
+import { DynamicSecret } from '@oyohim/ds'
+
+const webviewDS = DynamicSecret.createSign(DynamicSecret.Version.WebView)
+const DS = webbiewDS({/** post body */}, {/** get query params */})
 ```
 
 ## License
