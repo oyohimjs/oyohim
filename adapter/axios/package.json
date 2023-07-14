@@ -1,0 +1,33 @@
+{
+  "name": "@oyohim/adapter-axios",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Quester adapter for axios",
+  "author": "oyohimjs",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+htpps://github.com/oyohimjs/oyohim.git",
+    "directory": "adapter/axios"
+  },
+  "bugs": {
+    "url": "https://github.com/oyohimjs/oyohim/issues"
+  },
+  "homepage": "oyohimjs.github.io",
+  "keywords": [
+    "oyohim",
+    "quester",
+    "axios"
+  ],
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "axios": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
