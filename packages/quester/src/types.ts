@@ -1,17 +1,20 @@
-export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'ALL';
+export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD' | 'OPTIONS' | 'ALL'
 
 export interface QuesterConfig {
   baseURL?: string
+  url?: string
+  method?: HttpMethod
   headers?: QuesterHeaders
   timeout?: number
   httpAgent?: any
   httpsAgent?: any
-  params?: Record<string, any>
-  [propName: string]: any
+  data?: Record<string, any>
 }
 
 export interface QuesterAdapter {
-  <T = any>(method: HttpMethod, url: string, config?: QuesterConfig): Promise<QuesterAdapterResponse<T>>
+  readonly name: string
+  entity: (config: QuesterConfig) => any
+  quester: <T = any>(method: HttpMethod, config: QuesterConfig) => Promise<QuesterAdapterResponse<T>>
 }
 
 export interface QuesterAdapterResponse<T> {

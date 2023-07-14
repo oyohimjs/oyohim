@@ -11,11 +11,23 @@ export class Quester {
     return Quester.create(adapter, config)
   }
 
-  get<T = any>(url: string, params?: any, config?: Quester.Config): Promise<T> {
+  /**
+   * create a get quester instance
+   * @param url URL or path
+   * @param params query params
+   * @param config quester config
+   */
+  get<T = any>(url: string, params?: Record<string, any>, config?: Quester.Config): Promise<T> {
     return this('GET', url, { ...config, data: params })
   }
 
-  post<T = any>(url: string, data?: any, config?: Quester.Config): Promise<T> {
+  /**
+   * create a post quester instance
+   * @param url URL or path
+   * @param data body data
+   * @param config quester config
+   */
+  post<T = any>(url: string, data?: Record<string, any>, config?: Quester.Config): Promise<T> {
     return this('POST', url, { ...config, data })
   }
 }
@@ -23,15 +35,26 @@ export class Quester {
 export namespace Quester {
   export type Method = HttpMethod
   export type Headers = QuesterHeaders
-  export type Config = QuesterConfig
   export type Adapter = QuesterAdapter
+  export interface Config extends QuesterConfig {}
 
   export function create(adapter: Quester.Adapter, config: Quester.Config = {}): Quester {
-    const instance = (async function (method: Quester.Method, url: string, config: Quester.Config = {}) {
-      return (await adapter(method, url, { ...instance.config, ...config })).data
+    const request = (async (method, url, config) => {
+      const URI = new URL(url, config.baseURL)
+      const res = await adapter.quester(method, { url: URI.href, ...config })
+      return res.data
     }) as Quester
 
-    instance.config = config
-    return instance
+    Object.setPrototypeOf(request, Quester.prototype)
+    for (const key in Quester.prototype) {
+      if (['constructor'].includes(key)) continue
+      request[key] = Quester.prototype[key].bind(request)
+    }
+
+    // Mixin the adapter
+    request[adapter.name] = adapter.entity
+
+    request.config = config
+    return request
   }
 }

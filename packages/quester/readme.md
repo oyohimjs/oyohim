@@ -1,4 +1,4 @@
-# @oyoHiM/Quester
+# @oYoHim/Quester
 
 [![npm](https://img.shields.io/npm/v/@oyohim/quester?style=flat-square)](https://www.npmjs.com/package/@oyohim/quester)
 [![GitHub](https://img.shields.io/github/license/oyohimjs/oyohim?style=flat-square)](./LICENSE)
