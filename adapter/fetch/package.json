@@ -1,0 +1,29 @@
+{
+  "name": "@oyohim/adapter-fetch",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Quester adapter for fetch",
+  "author": "oyohimjs",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+htpps://github.com/oyohimjs/oyohim.git",
+    "directory": "adapter/fetch"
+  },
+  "bugs": {
+    "url": "https://github.com/oyohimjs/oyohim/issues"
+  },
+  "homepage": "oyohimjs.github.io",
+  "keywords": [
+    "oyohim",
+    "quester"
+  ],
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
